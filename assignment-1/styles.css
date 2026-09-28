@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+header, nav, main, footer {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+header {
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.my-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #0056b3;
+}
+
+.tagline {
+    color: #555;
+    font-size: 14px;
+}
+
+nav {
+    background-color: #0056b3;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #0056b3;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #0056b3;
+    color: white;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+a {
+    color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
