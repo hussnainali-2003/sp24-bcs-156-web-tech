@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tesla Storefront — CSC336 Assignment 2 (Hussnain Ali)</title>
+  
+  <!-- Bootstrap 5 CSS via Official CDN (Lecture 10 Frameworks) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Custom Assignment 2 Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================================================================== -->
+  <!-- 1. HEADER & RESPONSIVE NAVBAR (Bootstrap 5 Framework Component)       -->
+  <!-- ==================================================================== -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+      <div class="container">
+        
+        <!-- Site Name / Logo -->
+        <a class="navbar-brand brand-logo" href="index.html">T E S L A</a>
+        
+        <!-- Mobile Toggle Button (Responsive Navigation) -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#teslaNavbar" aria-controls="teslaNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse justify-content-center" id="teslaNavbar">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">All Models</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Model S Plaid</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#vehicles">Vehicles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#energy">Solar & Energy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#accessories">Charging & Gear</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Static Shopping Cart Icon (Does not need to work yet) -->
+        <div class="d-flex align-items-center">
+          <span class="cart-icon-btn" title="Shopping Bag (Static UI)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+            </svg>
+            <span>Bag</span>
+            <span class="cart-count">0</span>
+          </span>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- ==================================================================== -->
+  <!-- 2. HERO CAMPAIGN SHOWCASE                                            -->
+  <!-- ==================================================================== -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-tagline">CSC336 Web Technologies · Assignment 2</div>
+      <h1 class="hero-title">Electric Mobility & Sustainable Energy</h1>
+      <p class="hero-description">
+        Model S, Model 3, Model X, Model Y, and Cybertruck alongside architectural Solar Roof tiles and Powerwall storage.
+      </p>
+
+      <div class="hero-specs">
+        <div class="hero-spec-item">
+          <strong>1.99 s</strong>
+          <span>0-60 mph (Model S)</span>
+        </div>
+        <div class="hero-spec-item">
+          <strong>359 mi</strong>
+          <span>EPA Range</span>
+        </div>
+        <div class="hero-spec-item">
+          <strong>1,020 hp</strong>
+          <span>Peak Power</span>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="product.html" class="btn-tesla-primary">View Featured Model S</a>
+        <a href="#vehicles" class="btn-tesla-secondary">Explore Lineup</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <!-- 3. RESPONSIVE PRODUCT LISTING GRID (Bootstrap 5 Grid System)         -->
+  <!-- ==================================================================== -->
+  <main class="catalog-section" id="vehicles">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="catalog-header d-flex justify-content-between align-items-end flex-wrap gap-2">
+        <div>
+          <h2 class="h3 fw-bold text-dark mb-1">Tesla Vehicle & Energy Lineup</h2>
+          <p class="text-muted small mb-0">Responsive multi-column catalog reflowing at 375px, 768px, and 1440px</p>
+        </div>
+        <span class="badge bg-dark px-3 py-2 text-uppercase product-count">
+          9 Featured Products
+        </span>
+      </div>
+
+      <!-- Responsive Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop -->
+      <div class="row g-4">
+        
+        <!-- Product 1: Model S Plaid (Featured Product linking to product.html) -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Flagship Sedan</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-S-Main-Hero-Desktop-LHD.png" alt="Tesla Model S Plaid" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Model S Plaid</h3>
+              <p class="product-subtitle">Tri-Motor All-Wheel Drive</p>
+              <div class="product-specs">
+                <span>1.99s 0-60 mph</span> · <span>359 mi Range</span> · <span>1,020 hp</span>
+              </div>
+              <div class="product-price">$89,990</div>
+              <div class="d-grid gap-2">
+                <a href="product.html" class="btn-card-action primary">View Product Details</a>
+                <button type="button" class="btn-card-action secondary">Add to Cart (Static)</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 2: Model 3 Highland -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Electric Sedan</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-3-Desktop-LHD-v2.jpg" alt="Tesla Model 3 Highland" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Model 3 Highland</h3>
+              <p class="product-subtitle">Long Range All-Wheel Drive</p>
+              <div class="product-specs">
+                <span>4.2s 0-60 mph</span> · <span>341 mi Range</span> · <span>AWD</span>
+              </div>
+              <div class="product-price">$42,490</div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn-card-action primary">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 3: Cybertruck Cyberbeast -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Electric Truck</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Cybertruck-Desktop.png" alt="Tesla Cybertruck Cyberbeast" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Cybertruck Cyberbeast</h3>
+              <p class="product-subtitle">Ultra-Hard 30X Cold-Rolled Steel Exoskeleton</p>
+              <div class="product-specs">
+                <span>2.6s 0-60 mph</span> · <span>320 mi Range</span> · <span>11,000 lbs Tow</span>
+              </div>
+              <div class="product-price">$99,990</div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn-card-action primary">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 4: Model X Plaid -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Luxury SUV</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-X-Main-Hero-Desktop-LHD.png" alt="Tesla Model X Plaid" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Model X Plaid</h3>
+              <p class="product-subtitle">Falcon Wing Doors · 6-Seat Interior</p>
+              <div class="product-specs">
+                <span>2.5s 0-60 mph</span> · <span>326 mi Range</span> · <span>1,020 hp</span>
+              </div>
+              <div class="product-price">$94,990</div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn-card-action primary">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 5: Model Y Crossover -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Crossover</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-Y-Desktop-Global.png" alt="Tesla Model Y" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Model Y</h3>
+              <p class="product-subtitle">All-Wheel Drive Mid-Size Crossover</p>
+              <div class="product-specs">
+                <span>4.8s 0-60 mph</span> · <span>308 mi Range</span> · <span>76 cu ft Cargo</span>
+              </div>
+              <div class="product-price">$44,990</div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn-card-action primary">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 6: Tesla Solar Roof -->
+        <div class="col-12 col-md-6 col-lg-4" id="energy">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Clean Energy</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-SolarRoof-Desktop-Global.png" alt="Tesla Solar Roof" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Tesla Solar Roof</h3>
+              <p class="product-subtitle">Architectural Photovoltaic Glass Tiles</p>
+              <div class="product-specs">
+                <span>25-Year Warranty</span> · <span>Class 4 Hail</span> · <span>24/7 Power</span>
+              </div>
+              <div class="product-price">$28,500</div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn-card-action primary">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 7: Powerwall 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Battery Storage</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Powerwall-Desktop-US.png" alt="Tesla Powerwall 3" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Tesla Powerwall 3</h3>
+              <p class="product-subtitle">13.5 kWh Home Energy Storage System</p>
+              <div class="product-specs">
+                <span>11.5 kW Continuous</span> · <span>Integrated Inverter</span>
+              </div>
+              <div class="product-price">$8,400</div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn-card-action primary">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 8: Tesla Wall Connector -->
+        <div class="col-12 col-md-6 col-lg-4" id="accessories">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Charging</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Powerwall-Desktop-US.png" alt="Tesla Wall Connector" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Wall Connector</h3>
+              <p class="product-subtitle">Fast Level 2 Home Charging Station</p>
+              <div class="product-specs">
+                <span>Up to 44 mi/hr</span> · <span>48A Output</span> · <span>Wi-Fi Enabled</span>
+              </div>
+              <div class="product-price">$450</div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn-card-action primary">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Product 9: Mobile Connector Kit -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="product-card">
+            <div class="product-media">
+              <span class="product-badge">Charging</span>
+              <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Powerwall-Desktop-US.png" alt="Tesla Mobile Connector" class="img-fluid">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name">Mobile Connector</h3>
+              <p class="product-subtitle">Portable 120V & 240V Multi-Outlet Charger</p>
+              <div class="product-specs">
+                <span>20-Foot Cable</span> · <span>NEMA 5-15 & 14-50</span>
+              </div>
+              <div class="product-price">$250</div>
+              <div class="d-grid gap-2">
+                <button type="button" class="btn-card-action primary">Add to Cart</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================================================================== -->
+  <!-- 4. CONSISTENT FOOTER ACROSS BOTH PAGES                               -->
+  <!-- ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        
+        <!-- Column 1: Brand & Course Attribution -->
+        <div class="col-12 col-md-4">
+          <span class="fw-bold text-white tracking-widest text-uppercase d-block mb-2">T E S L A</span>
+          <p class="text-secondary small mb-3">
+            Accelerating the world's transition to sustainable energy with electric vehicles, integrated solar roofs, and scalable battery storage.
+          </p>
+          <div class="small text-secondary">
+            <div>Course: <strong>CSC336 Web Technologies</strong></div>
+            <div>Instructor: <strong>Sir Usman Akram</strong></div>
+            <div>Student: <strong>Hussnain Ali (SP24-BCS-156)</strong></div>
+          </div>
+        </div>
+
+        <!-- Column 2: Electric Vehicles -->
+        <div class="col-6 col-md-2">
+          <h4 class="footer-heading">Vehicles</h4>
+          <ul class="footer-links">
+            <li><a href="product.html">Model S Plaid</a></li>
+            <li><a href="#vehicles">Model 3 Highland</a></li>
+            <li><a href="#vehicles">Model X Plaid</a></li>
+            <li><a href="#vehicles">Model Y Crossover</a></li>
+            <li><a href="#vehicles">Cybertruck</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Energy Systems -->
+        <div class="col-6 col-md-3">
+          <h4 class="footer-heading">Clean Energy</h4>
+          <ul class="footer-links">
+            <li><a href="#energy">Solar Roof Active Tiles</a></li>
+            <li><a href="#energy">Powerwall 3 Battery</a></li>
+            <li><a href="#energy">Residential Solar Panels</a></li>
+            <li><a href="#accessories">Tesla Wall Connector</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Course Deliverables -->
+        <div class="col-12 col-md-3">
+          <h4 class="footer-heading">Deliverables</h4>
+          <ul class="footer-links">
+            <li><a href="product.html">Product Detail Page (product.html)</a></li>
+            <li><a href="assignment-2-completion-report.pdf" target="_blank">Completion PDF Report</a></li>
+            <li><a href="README.pdf" target="_blank">README Documentation</a></li>
+            <li><a href="https://www.tesla.com/" target="_blank" rel="noopener">Official Reference Site</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Strip -->
+      <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>Tesla Storefront Static Implementation © 2026 · Hussnain Ali (SP24-BCS-156)</div>
+        <div>COMSATS University Islamabad, Lahore Campus</div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
