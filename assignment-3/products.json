@@ -1,0 +1,17 @@
+[
+  {"id":"model-s","name":"Model S","price":89990,"image":"vehicle-1.jpg","description":"Long-range electric sedan."},
+  {"id":"model-3","name":"Model 3","price":42490,"image":"vehicle-2.jpg","description":"Everyday electric performance."},
+  {"id":"model-x","name":"Model X","price":99990,"image":"vehicle-3.jpg","description":"Room for every journey."},
+  {"id":"model-y","name":"Model Y","price":44990,"image":"vehicle-4.jpg","description":"Versatile electric SUV."},
+  {"id":"cybertruck","name":"Cybertruck","price":79990,"image":"vehicle-5.jpg","description":"Built for any adventure."},
+  {"id":"roadster","name":"Roadster","price":200000,"image":"vehicle-1.jpg","description":"Performance without compromise."},
+  {"id":"semi","name":"Tesla Semi","price":95000,"image":"vehicle-6.jpg","description":"Electric freight transport."},
+  {"id":"model-s-plaid","name":"Model S Plaid","price":124990,"image":"vehicle-1.jpg","description":"Track-ready electric power."},
+  {"id":"model-3-performance","name":"Model 3 Performance","price":54990,"image":"vehicle-2.jpg","description":"Sharper acceleration and handling."},
+  {"id":"model-x-plaid","name":"Model X Plaid","price":114990,"image":"vehicle-3.jpg","description":"SUV practicality with Plaid power."},
+  {"id":"model-y-performance","name":"Model Y Performance","price":54490,"image":"vehicle-4.jpg","description":"Fast, practical electric utility."},
+  {"id":"cybertruck-awd","name":"Cybertruck AWD","price":99990,"image":"vehicle-5.jpg","description":"All-wheel-drive electric utility."},
+  {"id":"model-3-long-range","name":"Model 3 Long Range","price":47490,"image":"vehicle-2.jpg","description":"Efficient long-distance travel."},
+  {"id":"model-y-long-range","name":"Model Y Long Range","price":49990,"image":"vehicle-4.jpg","description":"Extra range for every journey."},
+  {"id":"cybercab","name":"Cybercab","price":60000,"image":"vehicle-5.jpg","description":"A future-ready city ride."}
+]

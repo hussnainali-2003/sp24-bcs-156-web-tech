@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab 2 | Responsive Product Grid</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md bg-white border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">TESLA LAB</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link active" href="#products">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          </ul>
+          <a class="cart-link" href="#cart" aria-label="Shopping cart">🛒 <span>Cart</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro container text-center">
+      <p class="eyebrow">LECTURE 7–10 PRACTICE</p>
+      <h1>Responsive<span class="mobile-break"><br></span> vehicle collection</h1>
+      <p class="lead text-secondary">A small layout drill using Bootstrap's responsive columns.</p>
+    </section>
+
+    <section id="products" class="container pb-5">
+      <div class="row g-4">
+        <article class="col-12 col-md-6 col-lg-3"><div class="product-card"><div class="vehicle-image image-one">MODEL S</div><div class="p-3"><h2>Model S</h2><p class="text-secondary">Long-range electric sedan.</p><strong>$89,990</strong></div></div></article>
+        <article class="col-12 col-md-6 col-lg-3"><div class="product-card"><div class="vehicle-image image-two">MODEL 3</div><div class="p-3"><h2>Model 3</h2><p class="text-secondary">Everyday electric performance.</p><strong>$42,490</strong></div></div></article>
+        <article class="col-12 col-md-6 col-lg-3"><div class="product-card"><div class="vehicle-image image-three">MODEL X</div><div class="p-3"><h2>Model X</h2><p class="text-secondary">Room for every journey.</p><strong>$99,990</strong></div></div></article>
+        <article class="col-12 col-md-6 col-lg-3"><div class="product-card"><div class="vehicle-image image-four">MODEL Y</div><div class="p-3"><h2>Model Y</h2><p class="text-secondary">Versatile electric SUV.</p><strong>$44,990</strong></div></div></article>
+        <article class="col-12 col-md-6 col-lg-3"><div class="product-card"><div class="vehicle-image image-five">CYBERTRUCK</div><div class="p-3"><h2>Cybertruck</h2><p class="text-secondary">Built for any adventure.</p><strong>$79,990</strong></div></div></article>
+        <article class="col-12 col-md-6 col-lg-3"><div class="product-card"><div class="vehicle-image image-six">ROADSTER</div><div class="p-3"><h2>Roadster</h2><p class="text-secondary">Performance without compromise.</p><strong>$200,000</strong></div></div></article>
+        <article class="col-12 col-md-6 col-lg-3"><div class="product-card"><div class="vehicle-image image-seven">SEMI</div><div class="p-3"><h2>Tesla Semi</h2><p class="text-secondary">Electric freight transport.</p><strong>$95,000</strong></div></div></article>
+        <article class="col-12 col-md-6 col-lg-3"><div class="product-card"><div class="vehicle-image image-eight">CYBERCAB</div><div class="p-3"><h2>Cybercab</h2><p class="text-secondary">A future-ready city ride.</p><strong>$60,000</strong></div></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="about" class="border-top py-4">
+    <div class="container d-flex justify-content-between gap-3 flex-wrap">
+      <strong>TESLA LAB</strong><span class="text-secondary">CSC336 Web Technologies · Lab 2</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

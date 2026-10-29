@@ -2,101 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checkout — Tesla Storefront</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Tesla Vehicles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar navbar-dark bg-black py-3">
-      <div class="container">
-        <a class="brand-logo" href="index.html">T E S L A</a>
-        <a class="btn btn-outline-light" href="index.html">Back to Store</a>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container checkout-nav">
+        <a class="navbar-brand fw-bold letter-spaced" href="index.html">TESLA VEHICLES</a>
+        <a class="btn btn-outline-dark rounded-pill" href="index.html">Back to shop</a>
       </div>
     </nav>
   </header>
-
-  <main class="checkout-page">
-    <div class="container">
-      <h1>Checkout</h1>
-      <p class="checkout-note">Enter your contact and delivery details. Fields marked required must be completed.</p>
-
-      <form action="#" method="get">
-        <div class="checkout-fieldsets">
-          <fieldset class="checkout-fieldset">
-            <legend>Contact</legend>
-
-            <div class="checkout-row">
-              <label for="full-name">Full name</label>
-              <div>
-                <input class="checkout-control" type="text" id="full-name" name="full-name" autocomplete="name" required>
-                <small class="field-error">Enter your full name.</small>
-              </div>
-            </div>
-
-            <div class="checkout-row">
-              <label for="email">Email</label>
-              <div>
-                <input class="checkout-control" type="email" id="email" name="email" autocomplete="email" required>
-                <small class="field-error">Enter a valid email address.</small>
-              </div>
-            </div>
-
-            <div class="checkout-row">
-              <label for="phone">Phone</label>
-              <div>
-                <input class="checkout-control" type="tel" id="phone" name="phone" pattern="03[0-9]{2}-[0-9]{7}" placeholder="03XX-XXXXXXX" title="Use the format 03XX-XXXXXXX" autocomplete="tel" required>
-                <small class="field-error">Use the format 03XX-XXXXXXX.</small>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset class="checkout-fieldset">
-            <legend>Delivery</legend>
-
-            <div class="checkout-row">
-              <label for="address">Address</label>
-              <div>
-                <input class="checkout-control" type="text" id="address" name="address" autocomplete="street-address" required>
-                <small class="field-error">Enter your delivery address.</small>
-              </div>
-            </div>
-
-            <div class="checkout-row">
-              <label for="city">City</label>
-              <div>
-                <select class="checkout-control" id="city" name="city" autocomplete="address-level2" required>
-                  <option value="" selected disabled>Choose your city</option>
-                  <option value="lahore">Lahore</option>
-                  <option value="islamabad">Islamabad</option>
-                  <option value="karachi">Karachi</option>
-                  <option value="faisalabad">Faisalabad</option>
-                  <option value="multan">Multan</option>
-                </select>
-                <small class="field-error">Choose a city.</small>
-              </div>
-            </div>
-
-            <div class="checkout-row">
-              <label for="delivery-date">Delivery date</label>
-              <div>
-                <input class="checkout-control" type="date" id="delivery-date" name="delivery-date" min="2026-10-29" max="2026-12-24" required>
-                <small class="field-error">Choose a date between October 29 and December 24, 2026.</small>
-              </div>
-            </div>
-          </fieldset>
-        </div>
-
-        <button class="checkout-submit" type="submit">Place Order</button>
-      </form>
-    </div>
+  <main class="container py-5">
+    <h1 class="fw-bold mb-2">Checkout</h1>
+    <p class="text-secondary mb-4">Complete your delivery details.</p>
+    <form class="checkout-form" action="checkout.html" method="get">
+      <div class="checkout-grid">
+        <fieldset>
+          <legend>Contact</legend>
+          <div class="form-row"><label for="full-name">Full name</label><input id="full-name" name="full-name" type="text" required placeholder="Your full name"><small class="validation-message">Enter your full name.</small></div>
+          <div class="form-row"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"><small class="validation-message">Enter a valid email address.</small></div>
+          <div class="form-row"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required pattern="03[0-9]{2}-[0-9]{7}" placeholder="03XX-XXXXXXX"><small class="validation-message">Use the format 03XX-XXXXXXX.</small></div>
+        </fieldset>
+        <fieldset>
+          <legend>Delivery</legend>
+          <div class="form-row"><label for="address">Address</label><input id="address" name="address" type="text" required placeholder="Street address"><small class="validation-message">Enter a delivery address.</small></div>
+          <div class="form-row"><label for="city">City</label><select id="city" name="city" required><option value="">Choose a city</option><option>Lahore</option><option>Islamabad</option><option>Karachi</option><option>Rawalpindi</option></select><small class="validation-message">Choose a city.</small></div>
+          <div class="form-row"><label for="delivery-date">Delivery date</label><input id="delivery-date" name="delivery-date" type="date" min="2026-10-29" max="2026-12-24" required><small class="validation-message">Choose a date between October 29 and December 24, 2026.</small></div>
+        </fieldset>
+      </div>
+      <button class="btn btn-dark w-100 py-3" type="submit">Place order</button>
+    </form>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p class="mb-0">CSC336 Web Technologies · Hussnain Ali (SP24-BCS-156)</p>
-    </div>
-  </footer>
+  <footer class="py-4 border-top"><div class="container"><strong>TESLA VEHICLES</strong><span class="text-secondary ms-3">Student project for CSC336 Web Technologies</span></div></footer>
 </body>
 </html>

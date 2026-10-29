@@ -1,284 +1,67 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tesla Model S Plaid — CSC336 Assignment 2 (Hussnain Ali)</title>
-  
-  <!-- Bootstrap 5 CSS via Official CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  
-  <!-- Custom Assignment 2 Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tesla Model 3 | Tesla Vehicles</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- ==================================================================== -->
-  <!-- 1. CONSISTENT HEADER & NAVBAR (Identical across both pages)           -->
-  <!-- ==================================================================== -->
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
       <div class="container">
-        
-        <!-- Site Name / Logo -->
-        <a class="navbar-brand brand-logo" href="index.html">T E S L A</a>
-        
-        <!-- Mobile Toggle Button -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#teslaNavbar" aria-controls="teslaNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand fw-bold letter-spaced" href="index.html">TESLA VEHICLES</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Navigation Links -->
-        <div class="collapse navbar-collapse justify-content-center" id="teslaNavbar">
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">All Models</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="product.html">Model S Plaid</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#vehicles">Vehicles</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#energy">Solar & Energy</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#accessories">Charging & Gear</a>
-            </li>
-            <li class="nav-item desktop-shop-menu">
-              <a class="nav-link" href="#shop-by-category">Shop by Category</a>
-              <div class="mega-menu" id="shop-by-category">
-                <div class="mega-menu-column">
-                  <h2>Vehicles</h2>
-                  <ul><li><a href="index.html#vehicles">Model S</a></li><li><a href="index.html#vehicles">Model 3</a></li><li><a href="index.html#vehicles">Model X</a></li><li><a href="index.html#vehicles">Model Y</a></li><li><a href="index.html#vehicles">Cybertruck</a></li></ul>
-                </div>
-                <div class="mega-menu-column">
-                  <h2>Energy</h2>
-                  <ul><li><a href="index.html#energy">Solar Roof</a></li><li><a href="index.html#energy">Powerwall</a></li><li><a href="index.html#energy">Solar Panels</a></li><li><a href="index.html#energy">Energy Storage</a></li></ul>
-                </div>
-                <div class="mega-menu-column">
-                  <h2>Charging</h2>
-                  <ul><li><a href="index.html#accessories">Wall Connector</a></li><li><a href="index.html#accessories">Mobile Connector</a></li><li><a href="index.html#accessories">Home Charging</a></li><li><a href="index.html#accessories">Supercharging</a></li></ul>
-                </div>
-                <div class="mega-menu-column">
-                  <h2>Apparel</h2>
-                  <ul><li><a href="index.html#accessories">Men's Clothing</a></li><li><a href="index.html#accessories">Women's Clothing</a></li><li><a href="index.html#accessories">Kids' Clothing</a></li><li><a href="index.html#accessories">Hats</a></li></ul>
-                </div>
-                <div class="mega-menu-column">
-                  <h2>Accessories</h2>
-                  <ul><li><a href="index.html#accessories">Vehicle Accessories</a></li><li><a href="index.html#accessories">Charging Accessories</a></li><li><a href="index.html#accessories">Lifestyle Products</a></li><li><a href="index.html#accessories">Gift Cards</a></li></ul>
-                </div>
-              </div>
-            </li>
-            <li class="mobile-category-groups">
-              <details><summary>Vehicles</summary><ul><li><a href="index.html#vehicles">Model S</a></li><li><a href="index.html#vehicles">Model 3</a></li><li><a href="index.html#vehicles">Model X</a></li><li><a href="index.html#vehicles">Model Y</a></li><li><a href="index.html#vehicles">Cybertruck</a></li></ul></details>
-              <details><summary>Energy</summary><ul><li><a href="index.html#energy">Solar Roof</a></li><li><a href="index.html#energy">Powerwall</a></li><li><a href="index.html#energy">Solar Panels</a></li><li><a href="index.html#energy">Energy Storage</a></li></ul></details>
-              <details><summary>Charging</summary><ul><li><a href="index.html#accessories">Wall Connector</a></li><li><a href="index.html#accessories">Mobile Connector</a></li><li><a href="index.html#accessories">Home Charging</a></li><li><a href="index.html#accessories">Supercharging</a></li></ul></details>
-              <details><summary>Apparel</summary><ul><li><a href="index.html#accessories">Men's Clothing</a></li><li><a href="index.html#accessories">Women's Clothing</a></li><li><a href="index.html#accessories">Kids' Clothing</a></li><li><a href="index.html#accessories">Hats</a></li></ul></details>
-              <details><summary>Accessories</summary><ul><li><a href="index.html#accessories">Vehicle Accessories</a></li><li><a href="index.html#accessories">Charging Accessories</a></li><li><a href="index.html#accessories">Lifestyle Products</a></li><li><a href="index.html#accessories">Gift Cards</a></li></ul></details>
-            </li>
+        <div class="collapse navbar-collapse" id="mainNavigation">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#categories">Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
           </ul>
+          <a class="btn btn-dark rounded-pill px-4" href="product.html" aria-label="Shopping cart">Cart (0)</a>
         </div>
-
-        <!-- Cart opens the checkout page -->
-        <div class="d-flex align-items-center">
-          <a class="cart-icon-btn" href="checkout.html" title="Go to checkout">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-              <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
-            </svg>
-            <span>Bag</span>
-            <span class="cart-count">0</span>
-          </a>
-        </div>
-
       </div>
     </nav>
   </header>
 
-  <!-- ==================================================================== -->
-  <!-- 2. PRODUCT DETAIL VIEW (Flexbox / CSS Grid Layout)                   -->
-  <!-- ==================================================================== -->
-  <main class="pdp-section">
-    <div class="container">
-      
-      <!-- Breadcrumbs Back Navigation -->
-      <nav aria-label="breadcrumb" class="pdp-breadcrumbs">
-        <a href="index.html">← Back to All Vehicles</a>
-      </nav>
-
-      <!-- Main Product Grid: Large Image (col-lg-7) + Purchase Module (col-lg-5) -->
-      <div class="row g-4 align-items-start">
-        
-        <!-- Left Column: Larger Vehicle Imagery & Specification Gallery -->
-        <div class="col-12 col-lg-7">
-          <div class="pdp-image-container">
-            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-S-Main-Hero-Desktop-LHD.png" alt="Tesla Model S Plaid Front View" class="img-fluid">
-          </div>
-
-          <!-- Secondary Showcase Angle Cards -->
-          <div class="row g-3 mt-1">
-            <div class="col-6">
-              <div class="bg-white border rounded p-3 text-center">
-                <span class="badge bg-secondary mb-2">Powertrain</span>
-                <p class="small text-muted mb-0">Tri-Motor AWD with carbon-sleeved rotors and torque vectoring across rear wheels.</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="bg-white border rounded p-3 text-center">
-                <span class="badge bg-secondary mb-2">Cockpit</span>
-                <p class="small text-muted mb-0">17-inch cinematic touchscreen with 2200x1300 resolution and true colors.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Product Detail & Purchase Module -->
-        <div class="col-12 col-lg-5">
-          <article class="pdp-purchase-card">
-            
-            <span class="badge bg-danger mb-2 text-uppercase product-label">
-              Plaid Tri-Motor All-Wheel Drive
-            </span>
-            <h1 class="pdp-title">Model S Plaid</h1>
-            <p class="pdp-subtitle">The quickest accelerating production sedan in the world.</p>
-
-            <div class="pdp-price">$89,990</div>
-
-            <!-- Performance Specifications Grid -->
-            <div class="pdp-specs-grid">
-              <div class="pdp-spec-box">
-                <strong>1.99 s</strong>
-                <span>0-60 mph</span>
-              </div>
-              <div class="pdp-spec-box">
-                <strong>359 mi</strong>
-                <span>EPA Range</span>
-              </div>
-              <div class="pdp-spec-box">
-                <strong>1,020 hp</strong>
-                <span>Peak Power</span>
-              </div>
-            </div>
-
-            <!-- Detailed Description -->
-            <div class="pdp-description">
-              <p>
-                Model S Plaid has the quickest acceleration of any vehicle in production. Updated battery architecture for all Model S trims enables back-to-back track runs without performance degradation.
-              </p>
-              <ul class="ps-3 mb-3 small text-muted">
-                <li>Quarter Mile: 9.23@155 mph trap speed</li>
-                <li>Top Speed: 200 mph (with paid hardware upgrades)</li>
-                <li>Drag Coefficient: 0.208 Cd (lowest on Earth)</li>
-                <li>Supercharging Max: 250 kW (recover up to 200 miles in 15 minutes)</li>
-              </ul>
-            </div>
-
-            <!-- Static Purchase Form -->
-            <form>
-              <!-- Paint Selection -->
-              <div class="pdp-form-group">
-                <label class="pdp-form-label">Exterior Color (Included)</label>
-                <div class="d-flex gap-2">
-                  <span class="badge bg-dark px-3 py-2">Pearl White Multi-Coat</span>
-                  <span class="badge bg-secondary px-3 py-2">Solid Black</span>
-                  <span class="badge bg-secondary px-3 py-2">Deep Blue Metallic</span>
-                </div>
-              </div>
-
-              <!-- Quantity Selector (Required by Assignment 2) -->
-              <div class="pdp-form-group">
-                <label for="quantitySelect" class="pdp-form-label">Reservation Quantity</label>
-                <select id="quantitySelect" class="form-select form-select-sm quantity-select">
-                  <option value="1" selected>1 Unit</option>
-                  <option value="2">2 Units</option>
-                  <option value="3">3 Units</option>
-                </select>
-              </div>
-
-              <!-- Static Add to Cart Button (Does not need to work yet) -->
-              <div class="d-grid gap-2 mt-4">
-                <button type="button" class="btn btn-dark btn-lg py-3 fw-bold text-uppercase add-button">
-                  Add to Cart (Static UI)
-                </button>
-                <p class="text-center text-muted small mt-2 mb-0">
-                  Assignment 2 Deliverable · Non-functional static UI element
-                </p>
-              </div>
-            </form>
-
-          </article>
-        </div>
-
+  <main class="container py-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Shop</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Tesla Model 3</li>
+      </ol>
+    </nav>
+    <div class="row g-5 align-items-center product-detail">
+      <div class="col-12 col-lg-6">
+        <img src="images/vehicle-2.jpg" alt="Tesla Model 3 electric sedan" class="img-fluid rounded-3 detail-image">
+      </div>
+      <div class="col-12 col-lg-6">
+        <p class="eyebrow text-secondary">MODEL 3</p>
+        <h1 class="display-5 fw-bold">Tesla Model 3</h1>
+        <p class="fs-4">$42,490</p>
+        <p class="text-secondary">Model 3 combines long range, quick acceleration, and a clean interior in Tesla's most accessible sedan.</p>
+        <hr>
+        <label for="quantity" class="form-label fw-bold">Quantity</label>
+        <select id="quantity" class="form-select quantity-select mb-4" aria-label="Product quantity">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <button class="btn btn-dark rounded-pill w-100 py-3" type="button">Add to Cart</button>
+        <p class="small text-secondary mt-3 mb-0">Configure your vehicle online and arrange delivery with Tesla.</p>
       </div>
     </div>
   </main>
 
-  <!-- ==================================================================== -->
-  <!-- 3. CONSISTENT FOOTER ACROSS BOTH PAGES                               -->
-  <!-- ==================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row g-4 pb-4">
-        
-        <!-- Column 1: Brand & Course Attribution -->
-        <div class="col-12 col-md-4">
-          <span class="fw-bold text-white tracking-widest text-uppercase d-block mb-2">T E S L A</span>
-          <p class="text-secondary small mb-3">
-            Accelerating the world's transition to sustainable energy with electric vehicles, integrated solar roofs, and scalable battery storage.
-          </p>
-          <div class="small text-secondary">
-            <div>Course: <strong>CSC336 Web Technologies</strong></div>
-            <div>Instructor: <strong>Sir Usman Akram</strong></div>
-            <div>Student: <strong>Hussnain Ali (SP24-BCS-156)</strong></div>
-          </div>
-        </div>
-
-        <!-- Column 2: Electric Vehicles -->
-        <div class="col-6 col-md-2">
-          <h4 class="footer-heading">Vehicles</h4>
-          <ul class="footer-links">
-            <li><a href="product.html">Model S Plaid</a></li>
-            <li><a href="index.html#vehicles">Model 3 Highland</a></li>
-            <li><a href="index.html#vehicles">Model X Plaid</a></li>
-            <li><a href="index.html#vehicles">Model Y Crossover</a></li>
-            <li><a href="index.html#vehicles">Cybertruck</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: Energy Systems -->
-        <div class="col-6 col-md-3">
-          <h4 class="footer-heading">Clean Energy</h4>
-          <ul class="footer-links">
-            <li><a href="index.html#energy">Solar Roof Active Tiles</a></li>
-            <li><a href="index.html#energy">Powerwall 3 Battery</a></li>
-            <li><a href="index.html#energy">Residential Solar Panels</a></li>
-            <li><a href="index.html#accessories">Tesla Wall Connector</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Course Deliverables -->
-        <div class="col-12 col-md-3">
-          <h4 class="footer-heading">Deliverables</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Front Page (index.html)</a></li>
-            <li><a href="assignment-2-completion-report.pdf" target="_blank">Completion PDF Report</a></li>
-            <li><a href="README.pdf" target="_blank">README Documentation</a></li>
-            <li><a href="https://www.tesla.com/" target="_blank" rel="noopener">Official Reference Site</a></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Bottom Strip -->
-      <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
-        <div>Tesla Storefront Static Implementation © 2026 · Hussnain Ali (SP24-BCS-156)</div>
-        <div>COMSATS University Islamabad, Lahore Campus</div>
-      </div>
-
+  <footer class="py-4 border-top">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span class="fw-bold">TESLA VEHICLES</span>
+      <span class="text-secondary">Student project for CSC336 Web Technologies</span>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
