@@ -420,3 +420,113 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Midterm personal accent colour: H = (56 x 7) mod 360 = 32 degrees */
+:root {
+  --accent-color: hsl(32, 70%, 45%);
+}
+
+/* Desktop mega menu */
+.site-header {
+  z-index: 1031;
+}
+
+.desktop-shop-menu .mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1032;
+  display: none;
+  width: 100vw;
+  padding: 24px max(24px, calc((100vw - 1140px) / 2));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  color: #222;
+  background: white;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.desktop-shop-menu:hover .mega-menu,
+.desktop-shop-menu:focus-within .mega-menu {
+  display: grid;
+}
+
+.mega-menu-column h2 {
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-color);
+  font-size: 16px;
+}
+
+.mega-menu-column ul,
+.mobile-category-groups ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mega-menu-column a,
+.mobile-category-groups a {
+  display: block;
+  padding: 5px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.mega-menu-column a:hover,
+.mobile-category-groups a:hover {
+  color: var(--accent-color);
+}
+
+.mobile-category-groups {
+  display: none;
+}
+
+/* The lab breakpoint is BP = 600 + 56 = 656px */
+@media (min-width: 656px) {
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
+
+  .mobile-category-groups {
+    display: none;
+  }
+
+  .desktop-shop-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 655px) {
+  .desktop-shop-menu {
+    display: none;
+  }
+
+  .mobile-category-groups {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .mobile-category-groups details {
+    padding: 8px 0;
+    border-top: 1px solid #444;
+  }
+
+  .mobile-category-groups summary {
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .mobile-category-groups ul {
+    padding-left: 16px;
+  }
+
+}
